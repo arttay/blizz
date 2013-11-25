@@ -1,0 +1,359 @@
+html {
+  color: #85d5f1;
+}
+a {
+  color: #01b2f1;
+  text-decoration: none;
+}
+.title {
+  color: #39cbff;
+}
+.randomOTherColor {
+  color: #0091c5;
+}
+.blizzButton {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #15F3FF),
+    color-stop(1, #017CB9)
+  );
+  background-image: -o-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
+  background-image: -moz-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
+  background-image: -webkit-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
+  background-image: -ms-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
+  background-image: linear-gradient(to bottom, #15F3FF 0%, #017CB9 100%);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  display: block;
+  width: 234px;
+  margin: 10px auto;
+  height: 53px;
+  line-height: 50px;
+  font-family: 'century gothic',verdana;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  border: none;
+}
+
+
+
+
+
+
+.slide-leave-setup {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+     -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+       -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+          transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+}
+.slide-enter-setup {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+     -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+       -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+          transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 2s;
+}
+
+
+
+
+
+.slide-enter-setup {
+  position: absolute;
+  left: 1300px;
+}
+
+.slide-enter-start {
+  left: 0;
+}
+
+.slide-leave-setup {
+  position: absolute;
+  left: -1700px;
+}
+
+.slide-leave-start {
+  right: 0;
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#slideshow {
+    width: 1330px;
+    height: 600px;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 50px;
+
+}
+
+#slides {
+    margin-left: 237px;
+    position: relative;
+}
+
+#slideshow .nav {
+    position: absolute;
+    background-color: #141414;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    width: 206px;
+    height: 100%;
+    z-index: 10;
+}
+
+#slideshow .nav ul.questList{
+
+
+}
+#slideshow .nav li {
+  color: #fff;
+  text-decoration: none;
+}
+.quickTitles {
+  color: #fff;
+  width: 206px;
+padding: 12px 12px 10px 12px;
+}
+
+#slideshow .nav .quickFact ul {
+  list-style-image: url('../images/redbullet.png');
+}
+
+
+#slideshow .nav ol {
+  
+  color: #FFD100;
+}
+#slideshow .nav li {
+
+line-height: 1.75em;
+}
+
+
+
+
+#slideshow .nav ol a {
+  color: #FFD100;
+  font-family: Arial,sans-serif;
+  text-decoration: underline;
+}
+#slideshow .nav ol a:hover,.startQuest a:hover, .endQuest a:hover {
+  color: #fff;
+}
+
+.tempWrapper {
+  width: 1100px;
+}
+
+.clear {
+  clear:both;
+}
+
+.call {
+  width: 50%;
+  height: 509px;
+  background-color: #000;
+  float: left;
+  color: #fff;
+}
+.imgSlider {
+  width: 50%;
+  height: 509px;
+  background-color: #000;
+  float: left;
+  color: #fff;
+  overflow: hidden;
+}
+.next {
+  float: right;
+}
+.introFooter {
+  text-align: center;
+  background-color: #ccc;
+  height: 100px;
+}
+.factionSide {
+  background-image: url(../images/icon_blizzard.gif);
+  padding-left: 24px;
+}
+.startQuest {
+  background-image: url(../images/quest_start.gif);
+}
+.endQuest {
+    background-image: url(../images/quest_end.gif);
+}
+.listBacks {
+  padding-left: 17px;
+}
+.listExtras {
+  background-repeat: no-repeat;
+  background-position: left bottom 1px;
+}
+
+
+.startQuest a, .endQuest a {
+  color: #FFD100;
+  text-decoration: underline;
+}
+.slideshow {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  position:relative;
+  width:600px;
+  overflow:hidden;
+  background: #1a1a1a;
+  margin: 0 auto;
+  color: white;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: .3em;
+  margin-top: 30px;
+}
+
+.imageslide{
+  width:600px;
+  height:400px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  overflow:hidden;
+  position:relative;
+  text-align: center;
+}
+
+.imageslide .slider-content {
+  position: absolute;
+  width:100%;
+  height:400px;
+  
+}
+
+.animate-enter,.animate-leave {
+  -webkit-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -moz-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -ms-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  -o-transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+  transition:1000ms cubic-bezier(.165,.84,.44,1) all;
+}
+
+.animate-enter {
+  left: 1300px;
+}
+
+.animate-enter.animate-enter-active {
+  left:0;
+}
+
+.animate-leave {
+  left:0;
+}
+
+.animate-leave.animate-leave-active {
+  margin-left: -1700px;
+}
+
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(-32deg);
+
+/* Firefox */
+-moz-transform: rotate(-32deg);
+
+/* IE */
+-ms-transform: rotate(-32deg);
+
+/* Opera */
+-o-transform: rotate(-32deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+
+
+.currentLink {
+  color: #ccc !important;
+  text-decoration: none !important;
+  font-weight: bold;
+  cursor: text;
+}
+
+
+#slideshow .nav ol a.currentLink {
+    text-decoration: none !important;
+
+}
+
+.leftCol, .middleCol, .rightCol {
+  display: block;
+  width: 100%;
+  height: 33%;
+  color: #fff;
+}
+
+.leftCol {
+ color: #85d5f1;
+
+}
+.middleCol {
+ color: #85d5f1;
+
+}
+.rightCol {
+ color: #85d5f1;
+}
+
+.colWrap {
+    background-image: url(../images/bg/Warcraft-3-HD-Wallpaper.jpg);
+  background-position: -47%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  color: #85d5f1;
+  height: 600px;
+}
+
+.titleH2 {
+  font-size: 31.5px;/*h2*/
+  padding: 17px;
+  text-align: center;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
