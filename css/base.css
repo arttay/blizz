@@ -331,7 +331,10 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   font-size: 31.5px;/*h2*/
   padding: 17px;
   text-align: center;
-
+}
+.colWrap p {
+  width: 75%;
+margin: auto;
 }
 
 
