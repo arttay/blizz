@@ -1,1 +1,57 @@
 <h2>contact</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class = "pages">
+          <div id="slides" ng-switch="imageToShow" ng-animate="'slide'">
+          	<div class = "one" ng-switch-when="1"><div ng-include src="'js/templates/intro.html'"></div></div>
+            <div class = "two" ng-switch-when="2"><div ng-include src="'js/templates/why.html'"></div></div>
+            <div class = "three" ng-switch-when="3"><div ng-include src="'js/templates/resume.html'"></div></div>
+            <div class = "four" ng-switch-when="4"><div ng-include src="'js/templates/qualified.html'"></div></div>
+            <div class = "five" ng-switch-when="5"><div ng-include src="'js/templates/contact.html'"></div></div>
+          </div><!--end slides-->
+      </div><!--end pages-->
+
+ <div class = "nav">
+      <div class = "series">
+      <div class = "seriesTitle quickTitles">Series</div>
+        <ol class = "questList">
+            <li><a href="#" ng-click="imageToShow = 1" class = "intro currentLink navLinks" data-otherdiv="first">Intro</a></li>
+            <li><a href="#" ng-click="imageToShow = 2" class = "why navLinks" data-otherdiv="second">Why</a></li>
+            <li><a href="#" ng-click="imageToShow = 3" class = "resume navLinks" data-otherdiv="third">Res</a></li>
+            <li><a href="#" ng-click="imageToShow = 4" class = "qualified navLinks" data-otherdiv="fourth">How</a></li>
+            <li><a href="#" ng-click="imageToShow = 5" class = "contact navLinks" data-otherdiv="fifth">Contact me</a></li>
+        </ol>
+    </div><!--end series-->

@@ -1,4 +1,5 @@
 angular.module('MyApp', ['ui.bootstrap']).
+
 controller("MyController", function($scope) {
 	$scope.updateImg = function($scope) {
 		var imageToShow = 2;
@@ -18,17 +19,23 @@ controller("MyController", function($scope) {
 		console.log(tnum);
 	}
 
+
 })//end controller mycontroller
 function imgSlide($scope) {
   $scope.myInterval = 5000;
   var slides = $scope.slides = [
+	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' },
+	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' },
+	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' }
+
+  /*
 	{image: 'images/slide1.jpg', thumb: 'images/slide1.jpg', text: 'img' },
 	{image: 'images/slide2.jpg', thumb: 'images/slide2.jpg', text: 'img' },
 	{image: 'images/slide3.jpg', thumb: 'images/slide3.jpg', text: 'img' },
 	{image: 'images/slide4.jpg', thumb: 'images/slide4.jpg', text: 'img' }
 	//{image: 'images/slide5.jpg', thumb: 'images/slide5.jpg', text: 'img' }
 	//{image: 'images/slide6.jpg', thumb: 'images/slide6.jpg', text: 'img' }
-
+*/
   ];
 
   /*$scope.addSlide = function() {
@@ -46,11 +53,39 @@ function imgSlide($scope) {
 //{image: '../images/slide1.jpg', text: 'slide1' },
 
 function screenShots($scope) {
+	
 
-	var img = $scope.img = [
-		{image: 'images/slide1.jpg', thumb: 'images/slide1.jpg', large: 'images/slide1.jpg', text: 'img' }
+	var screenShots = $scope.screenShots = [
+		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/100/100/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
 	];
+	var lightBoxImg = $scope.lightBoxImg = [
+		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
+	];
+	$scope.lightbox = function($scope) {
+	/*	var lightBoxImg = $scope.lightBoxImg = [
+		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
+	
 
+	];
+		var lightBol = $scope.lightBool = lightBoxImg[0];
+		console.log(lightBol);*/
+		$scope.lightBolt = false;
+		console.log($scope.lightBolt);
+	}//end lgithbox
+	$scope.alert = function($scope) {
+		alert("f");
+
+	}
+	
+
+
+	$scope.lightBolt = false;
+		console.log($scope.lightBolt);
+
+	$scope.lightBox = lightBoxImg[0];
+	$scope.shots = screenShots[0];
+
+	console.log($scope.lightBox.large);
 }//end screenshots
 
 
