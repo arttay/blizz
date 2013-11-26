@@ -1,5 +1,4 @@
 angular.module('MyApp', ['ui.bootstrap']).
-
 controller("MyController", function($scope) {
 	$scope.updateImg = function($scope) {
 		var imageToShow = 2;
@@ -52,41 +51,8 @@ function imgSlide($scope) {
 }//end controller
 //{image: '../images/slide1.jpg', text: 'slide1' },
 
-function screenShots($scope) {
-	
-
-	var screenShots = $scope.screenShots = [
-		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/100/100/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
-	];
-	var lightBoxImg = $scope.lightBoxImg = [
-		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
-	];
-	$scope.lightbox = function($scope) {
-	/*	var lightBoxImg = $scope.lightBoxImg = [
-		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
-	
-
-	];
-		var lightBol = $scope.lightBool = lightBoxImg[0];
-		console.log(lightBol);*/
-		$scope.lightBolt = false;
-		console.log($scope.lightBolt);
-	}//end lgithbox
-	$scope.alert = function($scope) {
-		alert("f");
-
-	}
-	
 
 
-	$scope.lightBolt = false;
-		console.log($scope.lightBolt);
-
-	$scope.lightBox = lightBoxImg[0];
-	$scope.shots = screenShots[0];
-
-	console.log($scope.lightBox.large);
-}//end screenshots
 
 
 

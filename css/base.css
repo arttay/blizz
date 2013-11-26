@@ -88,13 +88,13 @@ h1 {
 
 #slideshow {
     width: 1330px;
-    height: 600px;
+    height: 700px;
     background: white;
     position: relative;
     overflow: hidden;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 50px;
+    margin-top: 30px;
 
 }
 
@@ -165,14 +165,14 @@ line-height: 1.75em;
 
 .call {
   width: 50%;
-  height: 509px;
+  height: 609px;
   background-color: #000;
   float: left;
   color: #fff;
 }
 .imgSlider {
   width: 50%;
-  height: 509px;
+  height: 609px;
   background-color: #000;
   float: left;
   color: #fff;
@@ -213,7 +213,7 @@ line-height: 1.75em;
   font-family: "Arial", sans-serif;
   text-align: center;
   position:relative;
-  width:600px;
+  width:700px;
   overflow:hidden;
   background: #1a1a1a;
   margin: 0 auto;
@@ -307,15 +307,15 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .leftCol {
- color: #85d5f1;
+ color: #fff;
 
 }
 .middleCol {
- color: #85d5f1;
+ color: #fff;
 
 }
 .rightCol {
- color: #85d5f1;
+ color: #fff;
 }
 
 .colWrap {
@@ -324,23 +324,42 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color: #000;
   background-repeat: no-repeat;
   color: #85d5f1;
-  height: 600px;
+  height: 700px;
 }
 
 .titleH2 {
   font-size: 31.5px;/*h2*/
   padding: 17px;
-  text-align: center;
+  margin-left: 20%;
 }
 .colWrap p {
-  width: 75%;
-margin: auto;
+  width: 47%;
+margin-left: 3%;
+}
+.odd, .even{
+  width: 100%;
+  height: 130px;
+  overflow: hidden;
+}
+.resumeHeader {
+  width: 100%;
+  height: 50px;
 }
 
+.odd {
+  background-color: #eae5de;
 
+}
+.posInfo {
+  width: 20%;
+}
+.accomp, .respons {
+  width: 40%;
+}
 
-
-
+.posInfo, .accomp, .respons {
+  float: left;
+}
 
 
 
