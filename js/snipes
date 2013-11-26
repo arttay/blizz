@@ -31,3 +31,31 @@
 	 });//end click
 
 
+		<div class = "target odd">
+			<div class = "posInfo">
+					<div class ="posTitle"><h2>title</h2></div><!--end title-->
+					<div class = "posCompany">
+						<a href = "#"><h3>comp</h3></a>
+					</div><!--end company-->
+					<div class = "posDates">dates</div><!--end dates-->
+			</div><!--end pos info-->
+			<div class = "respons">
+				res
+			</div><!--end responsibilities-->
+			<div class = "accomp">
+				acpp
+			</div><!--end Accomplishments-->
+			<div class = "clear"></div><!--clearfix-->
+		</div><!--end target 1-->
+		<div class = "polaris even">
+			polaris
+		</div><!--end polaris 2-->
+		<div class = "fuzzyDuck odd">
+			duck
+		</div><!--end fuzzy duck 3-->
+		<div class = "redhawk even">
+			hawk
+		</div><!--end redhawk 4-->
+		<div class = "school odd">
+			school
+		</div><!--end school 5-->

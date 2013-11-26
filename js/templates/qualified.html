@@ -1,1 +1,20 @@
-<h2>qualif</h2>
+<div class = "tempWrapper">
+  <div ng-controller = "qualif">
+    <div class = "ask">
+      <div ng-repeat = "q in wAsk">
+      	<div ng-class-even = "'qEven'" ng-class-odd="'qOdd'">
+      		<p >{{q.what}}</p>
+      	</div><!--end odd even-->
+      </div><!--end ng repeat-->
+    </div><!--end ask-->
+    <div class = "have">
+      <div ng-repeat = "q in wHave">
+        <div ng-class-even = "'qEven'" ng-class-odd="'qOdd'">
+      		<p>{{q.what}}</p>
+        </div><!--end odd/even-->
+      </div><!--end ng repeat-->
+    </div><!--end ask-->
+  </div><!--end controller-->
+</div>
+<!--7 must 7 op-->
+

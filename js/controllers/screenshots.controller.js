@@ -1,5 +1,5 @@
-angular.module('MyApp', ['ui.bootstrap']).
-controller("screenShots", function($scope) {
+
+function screenShots($scope) {
 	
 
 	var screenShots = $scope.screenShots = [
@@ -26,10 +26,10 @@ controller("screenShots", function($scope) {
 
 
 	$scope.lightBolt = false;
-		console.log($scope.lightBolt);
+	console.log($scope.lightBolt);
 
 	$scope.lightBox = lightBoxImg[0];
 	$scope.shots = screenShots[0];
 
 	console.log($scope.lightBox.large);
-})
+}

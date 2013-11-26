@@ -1,37 +1,29 @@
 <div class = "tempWrapper">
+	<div ng-controller = "resume">
 	<div class = "resWrapper">
 		<div class = "resumeHeader">
 			heading
 		</div>
-		<div class = "target odd">
-			<div class = "posInfo">
-					<div class ="posTitle"><h2>Web Dev</h2></div><!--end title-->
+		<div ng-repeat="info in compInfo">
+			<div class = "{{info.posComp}}" ng-class-odd = "'resOdd'" ng-class-even = "'resEven'">
+				<div class = "posInfo">
+					<div class ="posTitle"><h2>{{info.posTitle}}</h2></div><!--end title-->
 					<div class = "posCompany">
-						<a href = "#"><h3>Target</h3></a>
+						<a href = "{{info.link}}"><h3>{{info.posComp}}</h3></a>
 					</div><!--end company-->
-					<div class = "posDates">2013-pres</div><!--end dates-->
-			</div><!--end pos info-->
-			<div class = "respons">
-				res
-			</div><!--end responsibilities-->
-			<div class = "accomp">
-				acpp
-			</div><!--end Accomplishments-->
-			<div class = "clear"></div><!--clearfix-->
-		</div><!--end target 1-->
-		<div class = "polaris even">
-			polaris
-		</div><!--end polaris 2-->
-		<div class = "fuzzyDuck odd">
-			duck
-		</div><!--end fuzzy duck 3-->
-		<div class = "redhawk even">
-			hawk
-		</div><!--end redhawk 4-->
-		<div class = "school odd">
-			school
-		</div><!--end school 5-->
+					<div class = "posDates">{{info.posDates}}</div><!--end dates-->
+				</div><!--end pos info-->
+				<div class = "respons">
+					{{info.respons}}
+				</div><!--end responsibilities-->
+				<div class = "accomp">
+					{{info.accomp}}
+				</div><!--end Accomplishments-->
+				<div class = "clear"></div><!--clearfix-->
+			</div><!--end info.posComp-->
+		</div><!--end ng-repeat-->
 	</div><!--end res wrapper-->
+</div><!--end controller-->
 
 
 
