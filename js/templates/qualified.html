@@ -9,9 +9,12 @@
     </div><!--end ask-->
     <div class = "have">
       <div ng-repeat = "q in wHave" class = "qCell">
+  <div ng-controller = "qualif" class = "qualfWrap">
+        <div class = "ask">
+      <div ng-repeat = "q in wAsk">
         <div ng-class-even = "'qEven'" ng-class-odd="'qOdd'">
-      		<p>{{q.what}}</p>
-        </div><!--end odd/even-->
+          <p >{{q.what}}</p>
+        </div><!--end odd even-->
       </div><!--end ng repeat-->
     </div><!--end ask-->
   </div><!--end controller-->

@@ -156,7 +156,7 @@ line-height: 1.75em;
 }
 
 .tempWrapper {
-  width: 1100px;
+  width: 1093px;
 }
 
 .clear {
@@ -367,20 +367,64 @@ margin-left: 3%;
 }
 .have, .ask {
   float: left;
-  width: 50%;
+
+
+}
+
+.have {
+  width: 30%;
+
+}
+.ask {
+  width: 22%;
+
 }
 
 .qEven {
   background-color: #000;
   color: #fff;
 }
-.qCell {
-  height: 50px;
+
+
+.have .qEven {
+
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(left, #ffffff 0%, #000000 93%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(93%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #ffffff 0%,#000000 93%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #ffffff 0%,#000000 93%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #ffffff 0%,#000000 93%); /* IE10+ */
+background: linear-gradient(to right, #ffffff 0%,#000000 93%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
+.qOdd, .qEven {
+  height: 70px;
+}
+.qOdd a {
+  color: #fff;
+  text-decoration: underline;
+}
+.qEven a {
+color: #000;
+text-decoration: underline;
+}
+
+.have p {
+  padding-left: 10px;
+  line-height: 16px;
 }
 
 
-
-
+.random {
+  background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(left, #ffffff 0%, #000000 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, #ffffff 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, #ffffff 0%,#000000 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, #ffffff 0%,#000000 100%); /* IE10+ */
+background: linear-gradient(to right, #ffffff 0%,#000000 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=1 ); /* IE6-9 */
+}
 
 
 /*lightbox stuff*/
@@ -424,7 +468,14 @@ margin-left: 3%;
 }
 /*end lightbox*/
 
+.qualfWrap {
+  background-image: url(../images/bg/Warcraft-3-HD-Wallpaper-Picture.jpg);
+  background-position: 467%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  height: 700px;
 
+}
 
 
 

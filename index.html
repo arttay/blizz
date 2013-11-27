@@ -13,6 +13,7 @@
   <script src="js/controllers/screenshots.controller.js"></script> 
   <script src="js/directives/lightbox.directive.js"></script> 
   <script src="js/vendor/angular-ui.js"></script> 
+  <script src="http://code.angularjs.org/1.1.2/angular-sanitize.js"></script>
   <script src="js/vendor/ui-bootstrap-custom-tpls-0.6.0.js"></script> 
   <script src="js/vendor/bootstrap.js"></script> 
   <script src="js/jq.js"></script>
@@ -23,6 +24,12 @@
 <body>
 
   <div ng-controller="MyController" ng-init="imageToShow = 1">
+
+
+    <div ng-view>
+    </div><!--end view-->
+
+    
   <div id="slideshow">
 
       <div class = "pages">

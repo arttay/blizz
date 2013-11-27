@@ -1,5 +1,41 @@
-angular.module('MyApp', ['ui.bootstrap']).
-controller("MyController", function($scope) {
+var app = angular.module('MyApp', ['ui.bootstrap', 'ngSanitize']);
+
+
+app.config(function($routeProvider){
+	$routeProvider.
+	when("/",
+		{
+			templateUrl: "js/templates/intro.html"
+		}
+	).
+	when("/contact",
+		{
+			templateUrl: "js/templates/contact.html"
+		}
+	).
+	when("/qualified",
+		{
+			templateUrl: "js/templates/qualified.html"
+		}
+	).
+	when("/resume",
+		{
+			templateUrl: "js/templates/resume.html"
+		}
+	).
+	when("/why",
+		{
+			templateUrl: "js/templates/why.html",
+			
+		}
+	);
+
+
+
+});
+
+
+app.controller("MyController", function($scope, $http) {
 	$scope.updateImg = function($scope) {
 		var imageToShow = 2;
 		alert(imageToShow);
@@ -112,85 +148,69 @@ function resume($scope) {
 function qualif($scope) {
 	var ask = $scope.ask = [
 		{
-			what: 'ask'
+			what: 'Expert knowledge of CSS, JavaScript, and DOM'//1
 		},
 		{
-			what: 'ask'
+			what: 'Extensive experience with Ajax and JavaScript libraries'//2
 		},
 		{
-			what: 'ask'
+			what: 'Experience using an MVC framework'//3
 		},
 		{
-			what: 'ask'
+			what: 'Familiar with HTTP and basic networking concepts'//4
 		},
 		{
-			what: 'ask'
+			what: 'Basic proficiency with Photoshop'//5
 		},
 		{
-			what: 'ask'
+			what: 'Self-motivated, and able to independently identify and implement needed improvements'//6
 		},
 		{
-			what: 'ask'
+			what: 'Experience authoring websites for mobile devices'//7
 		},
 		{
-			what: 'ask'
+			what: 'Contributions to open-source projects or personal projects'//9
 		},
 		{
-			what: 'ask'
+			what: 'Strong knowledge of object-oriented programming in languages like Java, C++, Objective-C, or equivalent'//10
 		},
 		{
-			what: 'ask'
-		},
-		{
-			what: 'ask'
-		},
-		{
-			what: 'ask'
-		},
-		{
-			what: 'ask'
+			what: 'A passion for web development and gaming'//13
 		}
 	];
 	var have = $scope.have = [
 		{
-			what: 'have'
+			what: 'have'//expert css/js/dom
 		},
 		{
-			what: 'have'
+			what: "3 years with jQuery/UI5<br />~1 year with Handlesbars/Mustache/Grunt"//ajax/js libraries
 		},
 		{
-			what: 'have'
+			what: 'Kockout at polaris <br />Backbone at Target <br />Angularjs on this site!'//mvcs
 		},
 		{
-			what: 'have'
+			what: 'I have experience with several protocol; HTTP, FTP, IP4/6, SMTP and SSH'//http/networking protocals
 		},
 		{
-			what: 'have'
+			what: 'Most images on this site were edited<br /> in some small way in photoshop '//photoshop
 		},
 		{
-			what: 'have'
+			what: "I could write it all out<br />but it would be better to <a href ='https://www.google.com/'>tell you</a>"//videos
 		},
 		{
-			what: 'have'
+			what: 'My current position is solely dedicated to authoring/refactoring target mobile'//mobile stuff
 		},
 		{
-			what: 'have'
+			what: 'have'//open source/personal projects
 		},
 		{
-			what: 'have'
+			what: "I would refer to my <a href = 'https://github.com/arttay?tab=repositories' target='_blank'>github account</a> <br />for a list of my projects that used C++"//oop stuff
 		},
 		{
-			what: 'have'
+			what: 'have'//pasoin
 		},
-		{
-			what: 'have'
-		},
-		{
-			what: 'have'
-		},
-		{
-			what: 'have'
-		},
+
+	
 
 	];
 	$scope.wAsk = ask;

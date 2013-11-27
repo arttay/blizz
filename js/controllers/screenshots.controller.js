@@ -26,10 +26,10 @@ function screenShots($scope) {
 
 
 	$scope.lightBolt = false;
-	console.log($scope.lightBolt);
+	//console.log($scope.lightBolt);
 
 	$scope.lightBox = lightBoxImg[0];
 	$scope.shots = screenShots[0];
 
-	console.log($scope.lightBox.large);
+	//console.log($scope.lightBox.large);
 }
