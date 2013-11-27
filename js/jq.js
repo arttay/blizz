@@ -32,7 +32,6 @@ $(document).ready(function(){
 	var linkList = ["intro", "why", "resume", "qualified", "contact"];
 
 	 $(".navLinks").click(function(){
-	 	var $this = $(this);
 	 	var classes = this.classList;
 	 	var currentLink = classes[0];
 	 	$("." + currentLink +  "").addClass('currentLink');

@@ -7,25 +7,21 @@ app.config(function($routeProvider){
 		{
 			templateUrl: "js/templates/intro.html"
 		}
-	).
-	when("/contact",
+	).when("/contact",
 		{
 			templateUrl: "js/templates/contact.html"
 		}
-	).
-	when("/qualified",
+	).when("/qualified",
 		{
 			templateUrl: "js/templates/qualified.html"
 		}
-	).
-	when("/resume",
+	).when("/resume",
 		{
 			templateUrl: "js/templates/resume.html"
 		}
-	).
-	when("/why",
+	).when("/why",
 		{
-			templateUrl: "js/templates/why.html",
+			templateUrl: "js/templates/why.html"
 			
 		}
 	).when("/video",
@@ -33,9 +29,6 @@ app.config(function($routeProvider){
 			templateUrl: "js/templates/video.html"
 		}
 	);
-
-
-
 });
 
 
@@ -61,7 +54,7 @@ app.controller("MyController", function($scope, $http) {
 
 
 })//end controller mycontroller
-function imgSlide($scope) {
+app.controller("imgSlide", function($scope, $http){
   $scope.myInterval = 5000;
   var slides = $scope.slides = [
 	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' },
@@ -89,138 +82,68 @@ function imgSlide($scope) {
   for (var i=0; i<4; i++) {
     $scope.addSlide();
   }*/
-}//end controller
+
+
+})
+
 //{image: '../images/slide1.jpg', text: 'slide1' },
 
+app.controller("resume", function($scope, $http){
+
+	$http({
+		method: "GET", url: 'js/controllers/data/resume.data.js'
+	}).
+	success(function(data){
+		$scope.compInfo = data;
+	});
+})//end controller
 
 
-function resume($scope) {
-	var compInfo = $scope.compInfo = [
-		{
-			posComp: 'posComp',
-			posTitle: 'posTitle',
-			posDates: 'dates',
-			respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-			accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-			link: '#' 
-		},
-		{
-			posComp: 'posComp',
-		 	posTitle: 'posTitleT',
-		  	posDates: 'datesT',
-		   	respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		   	accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		     	link: '#' 
-		},
-		{
-			posComp: 'posComp',
-		 	posTitle: 'posTitleT',
-		  	posDates: 'datesT',
-		   	respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		   	accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		     	link: '#' 
-		},
-		{
-			posComp: 'posComp',
-			posTitle: 'posTitle',
-			posDates: 'dates',
-			respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-			accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-			link: '#' 
-		},
-		{
-			posComp: 'posComp',
-		 	posTitle: 'posTitleT',
-		  	posDates: 'datesT',
-		   	respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		   	accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		     	link: '#' 
-		},
-		{
-			posComp: 'posComp',
-		 	posTitle: 'posTitleT',
-		  	posDates: 'datesT',
-		   	respons: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		   	accomp: 'has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ip',
-		     	link: '#' 
-		}
+app.controller("qualif", function($scope, $http) {
+	$http({
+		method: "GET", url: 'js/controllers/data/ask.data.js'
+	}).
+	success(function(data){
+		$scope.wAsk = data;
+	});
 
+	$http({
+		method: "GET", url: 'js/controllers/data/have.data.js'
+	}).
+	success(function(data){
+		$scope.wHave = data;
+	});
+})//end controller
+
+app.controller("screenShots", function($scope) {
+
+
+	var screenShots = $scope.screenShots = [
+		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/100/100/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
 	];
-
-	$scope.posInfo = compInfo;
-	//console.log($scope.posInfo)
-}//end resume controller
-function qualif($scope) {
-	var ask = $scope.ask = [
-		{
-			what: 'Expert knowledge of CSS, JavaScript, and DOM'//1
-		},
-		{
-			what: 'Extensive experience with Ajax and JavaScript libraries'//2
-		},
-		{
-			what: 'Experience using an MVC framework'//3
-		},
-		{
-			what: 'Familiar with HTTP and basic networking concepts'//4
-		},
-		{
-			what: 'Basic proficiency with Photoshop'//5
-		},
-		{
-			what: 'Self-motivated, and able to independently identify and implement needed improvements'//6
-		},
-		{
-			what: 'Experience authoring websites for mobile devices'//7
-		},
-		{
-			what: 'Contributions to open-source projects or personal projects'//9
-		},
-		{
-			what: 'Strong knowledge of object-oriented programming in languages like Java, C++, Objective-C, or equivalent'//10
-		},
-		{
-			what: 'A passion for web development and gaming'//13
-		}
+	var lightBoxImg = $scope.lightBoxImg = [
+		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
 	];
-	var have = $scope.have = [
-		{
-			what: 'have'//expert css/js/dom
-		},
-		{
-			what: "3 years with jQuery/UI5<br />~1 year with Handlesbars/Mustache/Grunt"//ajax/js libraries
-		},
-		{
-			what: 'Kockout at polaris <br />Backbone at Target <br />Angularjs on this site!'//mvcs
-		},
-		{
-			what: 'I have experience with several protocol; HTTP, FTP, IP4/6, SMTP and SSH'//http/networking protocals
-		},
-		{
-			what: 'Most images on this site were edited<br /> in some small way in photoshop '//photoshop
-		},
-		{
-			what: "I could write it all out<br />but it would be better to <a href ='#/video'>tell you</a>"//videos
-		},
-		{
-			what: 'My current position is solely dedicated to authoring/refactoring target mobile'//mobile stuff
-		},
-		{
-			what: 'have'//open source/personal projects
-		},
-		{
-			what: "I would refer to my <a href = 'https://github.com/arttay?tab=repositories' target='_blank'>github account</a> <br />for a list of my projects that used C++"//oop stuff
-		},
-		{
-			what: 'have'//pasoin
-		},
+	$scope.src = lightBoxImg[0].image;
+	$scope.lightbox = function() {
+		var light = $scope.lightBoxImg[0];
+		$scope.src = light.large;
 
-	
+		
+	}//end lgithbox
 
-	];
-	$scope.wAsk = ask;
-	$scope.wHave = have;
-}
+	$scope.lightBolt = false;
+	//console.log($scope.lightBolt);
+
+	$scope.lightBox = lightBoxImg[0];
+	$scope.shots = screenShots[0];
+
+	//console.log($scope.lightBox.large);
+
+})//end controller
+
+
+
 
 
 
