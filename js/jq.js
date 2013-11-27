@@ -29,7 +29,7 @@ if (!Array.prototype.indexOf) {
 }
 
 $(document).ready(function(){
-	var linkList = ["intro", "resume", "qualified", "contact"];
+	var linkList = ["intro", "why", "resume", "qualified", "contact"];
 
 	 $(".navLinks").click(function(){
 	 	var $this = $(this);
@@ -49,6 +49,8 @@ $(document).ready(function(){
 			item(or rather all items with that class) and removes 
 			the class from all items when another item with the class 
 			nav linkes is clicked
+
+			^_^
 		*/
 	 });
 });

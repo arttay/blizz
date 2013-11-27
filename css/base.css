@@ -370,9 +370,12 @@ margin-left: 3%;
   width: 50%;
 }
 
-.qOdd {
+.qEven {
   background-color: #000;
   color: #fff;
+}
+.qCell {
+  height: 50px;
 }
 
 
