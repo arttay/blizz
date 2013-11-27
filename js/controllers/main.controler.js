@@ -1,6 +1,6 @@
 var app = angular.module('MyApp', ['ui.bootstrap', 'ngSanitize']);
 
-
+//yay routing
 app.config(function($routeProvider){
 	$routeProvider.
 	when("/",
@@ -28,6 +28,10 @@ app.config(function($routeProvider){
 			templateUrl: "js/templates/why.html",
 			
 		}
+	).when("/video",
+		{
+			templateUrl: "js/templates/video.html"
+		}
 	);
 
 
@@ -36,6 +40,7 @@ app.config(function($routeProvider){
 
 
 app.controller("MyController", function($scope, $http) {
+	//most of this is crap that is not used
 	$scope.updateImg = function($scope) {
 		var imageToShow = 2;
 		alert(imageToShow);
@@ -195,7 +200,7 @@ function qualif($scope) {
 			what: 'Most images on this site were edited<br /> in some small way in photoshop '//photoshop
 		},
 		{
-			what: "I could write it all out<br />but it would be better to <a href ='https://www.google.com/'>tell you</a>"//videos
+			what: "I could write it all out<br />but it would be better to <a href ='#/video'>tell you</a>"//videos
 		},
 		{
 			what: 'My current position is solely dedicated to authoring/refactoring target mobile'//mobile stuff
