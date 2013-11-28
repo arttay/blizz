@@ -55,37 +55,8 @@ app.controller("imgSlide", function($scope, $http){
 */
   ];
 
-  /*$scope.addSlide = function() {
-    var newWidth = 200 + ((slides.length + (25 * slides.length)) % 150);
-    slides.push({
-      image: 'http://placekitten.com/' + newWidth + '/200',
-      text: ['More','Extra','Lots of','Surplus'][slides.length % 4] + ' ' +
-        ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-    });
-  };
-  for (var i=0; i<4; i++) {
-    $scope.addSlide();
-  }*/
-
-
 })
-.directive('routeTransition', function () {
-    return {
-        restrict: 'A',
-        scope: true,
-        link: function (scope, el, attrs) {
-            scope.$on('$routeChangeStart', function () {
-                el.addClass('slide-enter-setup');
-                el.removeClass('slide-leave-setup');
-            });
-            scope.$on('$routeChangeSuccess', function () {
-                el.addClass('slide-enter-setup');
-                el.removeClass('slide-leave-setup');
-            });
-        }
-    };
-});
-//{image: '../images/slide1.jpg', text: 'slide1' },
+
 
 app.controller("resume", function($scope, $http){
 
