@@ -2,21 +2,25 @@
 <html ng-app="MyApp">
 <head>
   <title>ng-animate slideshow</title>
-  <link href="css/base.css" rel="stylesheet">
   <link href="css/vendor/bootstrap.css" rel="stylesheet">
   <link href="css/vendor/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
-  <script src="js/controllers/main.controler.js"></script> 
-
-  <script src="js/directives/lightbox.directive.js"></script> 
-  <script src="js/vendor/angular-ui.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.3/angular-route.min.js"></script>
   <script src="http://code.angularjs.org/1.1.2/angular-sanitize.js"></script>
   <script src="js/vendor/ui-bootstrap-custom-tpls-0.6.0.js"></script> 
-  <script src="js/vendor/bootstrap.js"></script> 
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/angular-ui.js"></script> 
+
+  
   <script src="js/jq.js"></script>
+  <script src="js/directives/lightbox.directive.js"></script> 
+  <script src="js/controllers/main.controler.js"></script>  
+  
 
 
 </head>
@@ -26,15 +30,11 @@
 
 ...rotten kids....
 -->
-  <div ng-controller="MyController" ng-init="imageToShow = 1">
-
-
-
-
+  <div ng-controller="MyController" >
   <div id="slideshow">
 
       <div class = "pages">
-          <div ng-view id="slides" ng-switch="imageToShow" ng-animate="'slide'">
+          <div ng-view id="slides" ng-animate="'slide'">
                     <!--inside main view-->
           </div><!--end main view-->
       </div><!--end pages-->
@@ -44,9 +44,7 @@
         <div class ="prepTitle quickTitles"> Quick Facts</div>
           <div class = "quickFact">
             <ul>
-                <li>Level: 90</li>
-                <li>Required: 90+</li>
-                <li>Side: <span class = "factionSide listExtras">Blizz</span></li>
+    
                 <li>Start:<span class = "startQuest listBacks listExtras"><a href="#" class = "intro currentLink navLinks">Intro</a></li>
                 <li>End:<span class = "endQuest listBacks listExtras"><a href="#/contact" class = "contact navLinks">Contact me</a></li>
             </ul>
@@ -55,11 +53,11 @@
       <div class = "series">
       <div class = "seriesTitle quickTitles">Series</div>
         <ol class = "questList">
-            <li><a href="/blizz" class = "intro currentLink navLinks">Intro</a></li>
-            <li><a href="/blizz/#/why" class = "why navLinks">Why</a></li>
-            <li><a href="/blizz/#/resume" class = "resume navLinks">Res</a></li>
-            <li><a href="/blizz/#/qualified" class = "qualified navLinks">How</a></li>
-            <li><a href="/blizz/#/contact" class = "contact navLinks">Contact me</a></li>
+            <li><a ng-click="go('/')"  class = "intro currentLink navLinks">Intro</a></li>
+            <li><a ng-click="go('/why')"  class = "why navLinks">Why</a></li>
+            <li><a ng-click="go('/resume')" class = "resume navLinks">Res</a></li>
+            <li><a ng-click="go('/qualified')" class = "qualified navLinks">How</a></li>
+            <li><a ng-click="go('/contact')" class = "contact navLinks">Contact me</a></li>
         </ol>
     </div><!--end series-->
       <div class = "screenshots">

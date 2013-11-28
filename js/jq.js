@@ -27,20 +27,20 @@ if (!Array.prototype.indexOf) {
     return -1;
   };
 }
-
-$(document).ready(function(){
+jQuery.noConflict();
+jQuery(document).ready(function(){
 	var linkList = ["intro", "why", "resume", "qualified", "contact"];
 
-	 $(".navLinks").click(function(){
+	 jQuery(".navLinks").click(function(){
 	 	var classes = this.classList;
 	 	var currentLink = classes[0];
-	 	$("." + currentLink +  "").addClass('currentLink');
+	 	jQuery("." + currentLink +  "").addClass('currentLink');
 	 	var index = linkList.indexOf(currentLink);
 		if (index > -1) {
 			linkList.splice(index, 1);
 		}
 		for(i=0; i < linkList.length; i++) {
-			$("." + linkList[i] + "").removeClass("currentLink");
+			jQuery("." + linkList[i] + "").removeClass("currentLink");
 		}
 		linkList.push(currentLink);
 		/*

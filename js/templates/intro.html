@@ -1,6 +1,6 @@
 <div class = "tempWrapper">	
 	<div class = "imgSlider">
-		<div ng-controller="imgSlide">
+		<div ng-controller="imgSlide" class = "innerSlider">
 			<carousel interval="myInterval">
 		    	<slide ng-repeat="slide in slides" active="slide.active">
 		      	<img ng-src="{{slide.image}}" style="margin:auto;">
