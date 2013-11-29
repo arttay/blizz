@@ -2,20 +2,25 @@
 <html ng-app="MyApp">
 <head>
   <title>ng-animate slideshow</title>
-  <link href="css/base.css" rel="stylesheet">
   <link href="css/vendor/bootstrap.css" rel="stylesheet">
   <link href="css/vendor/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/base.css" rel="stylesheet">
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
-  <script src="js/controllers/main.controler.js"></script> 
-
-  <script src="js/vendor/angular-ui.js"></script> 
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.3/angular-route.min.js"></script>
   <script src="http://code.angularjs.org/1.1.2/angular-sanitize.js"></script>
   <script src="js/vendor/ui-bootstrap-custom-tpls-0.6.0.js"></script> 
-  <script src="js/vendor/bootstrap.js"></script> 
+  <script src="js/vendor/bootstrap.js"></script>
+  <script src="js/vendor/angular-ui.js"></script> 
+
+  
   <script src="js/jq.js"></script>
+  <script src="js/directives/lightbox.directive.js"></script> 
+  <script src="js/controllers/main.controler.js"></script>  
+  
 
 
 </head>
@@ -33,7 +38,11 @@
   <div id="slideshow">
 
       <div class = "pages" >
-          <div ng-view id="slides" ng-animate="'slide'">
+  <div ng-controller="MyController" >
+  <div id="slideshow">
+
+      <div class = "pages">
+          <div class = "ng-view" id="slides" ng-animate="'slide'">
                     <!--inside main view-->
           </div><!--end main view-->
       </div><!--end pages-->
@@ -54,20 +63,19 @@
       <div class = "series">
       <div class = "seriesTitle quickTitles">Series</div>
         <ol class = "questList">
-            <li><a href="/blizz" class = "intro currentLink navLinks">Intro</a></li>
-            <li><a href="/blizz/#/why" class = "why navLinks">Why</a></li>
-            <li><a href="/blizz/#/resume" class = "resume navLinks">Res</a></li>
-            <li><a href="/blizz/#/qualified" class = "qualified navLinks">How</a></li>
-            <li><a href="/blizz/#/contact" class = "contact navLinks">Contact me</a></li>
+            <li><a ng-click="go('/')"  class = "intro currentLink navLinks">Intro</a></li>
+            <li><a ng-click="go('/why')"  class = "why navLinks">Why</a></li>
+            <li><a ng-click="go('/resume')" class = "resume navLinks">Res</a></li>
+            <li><a ng-click="go('/qualified')" class = "qualified navLinks">How</a></li>
+            <li><a ng-click="go('/contact')" class = "contact navLinks">Contact me</a></li>
         </ol>
     </div><!--end series-->
       <div class = "screenshots">
           <div ng-controller = "screenShots">
-
-              <div class = "screenshotThumb" >
-                <div class = "screenTitle">screentitle({{len}})</div>
-                <img ng-src = "{{src}}" alt = "{{screenShots.text}}" />
-              </div><!--end thumb-->
+            <div class = "screenshotThumb" >
+              <div class = "screenTitle">Screenshots({{len}})</div>
+              <img ng-src = "{{src}}" alt = "{{screenShots.text}}" ng-click = "lightbox(); tog=1" ng-class = "{'light-box': tog==1}" />
+            </div><!--end thumb-->
             <div class = "ligthbox">
 
               <!--<div ng-include ="'js/templates/lightbox.html'"></div>--><!--end lightbox temp-->

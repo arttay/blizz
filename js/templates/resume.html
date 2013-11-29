@@ -2,7 +2,10 @@
 	<div ng-controller = "resume">
 	<div class = "resWrapper">
 		<div class = "resumeHeader">
-			heading
+			<div class = "posHeaderInfo resHeader">Position Info</div>
+			<div class = "posAccomInfo resHeader">My Accomplishments</div>
+			<div class = "posResponsInfo resHeader">My Responsibilities</div>
+
 		</div>
 		<div ng-repeat="info in compInfo">
 			<div class = "{{info.posComp}}" ng-class-odd = "'resOdd'" ng-class-even = "'resEven'">

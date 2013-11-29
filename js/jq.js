@@ -28,21 +28,37 @@ if (!Array.prototype.indexOf) {
   };
 }
 
-$(document).ready(function(){
+jQuery.noConflict();
+jQuery(document).ready(function(){
+	var link = document.location.href.split('/');
+		if(link[5].length != 0) {
+			console.log(link[5]);
+			jQuery("." + link[5] + "").addClass("currentLink");
+			jQuery(".intro").removeClass("currentLink");
+		}
+		else {
+			console.log(link[5]);
+		}
 	var linkList = ["intro", "why", "resume", "qualified", "contact"];
 
-	 $(".navLinks").click(function(){
+	 jQuery(".navLinks").click(function(){
+	 	
+
 	 	var classes = this.classList;
 	 	var currentLink = classes[0];
-	 	$("." + currentLink +  "").addClass('currentLink');
+	 	jQuery("." + currentLink +  "").addClass('currentLink');
 	 	var index = linkList.indexOf(currentLink);
 		if (index > -1) {
 			linkList.splice(index, 1);
 		}
 		for(i=0; i < linkList.length; i++) {
-			$("." + linkList[i] + "").removeClass("currentLink");
+			jQuery("." + linkList[i] + "").removeClass("currentLink");
 		}
 		linkList.push(currentLink);
+	
+
+
+
 		/*
 			this small click function addds a class to the clicked 
 			item(or rather all items with that class) and removes 
@@ -51,5 +67,5 @@ $(document).ready(function(){
 
 			^_^
 		*/
-	 });
+	 });//end click
 });
