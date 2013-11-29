@@ -95,6 +95,7 @@ app.controller("screenShots", function($scope) {
 		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
 	];
 	$scope.src = lightBoxImg[0].image;
+	$scope.len = lightBoxImg.length;
 	$scope.lightbox = function() {
 		var light = $scope.lightBoxImg[0];
 		$scope.src = light.large;
