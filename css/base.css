@@ -430,13 +430,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 
+.screenTitle {
+  color: #fff;
 
-.light-box {
-  position: absolute;
-left: 700px;
 }
-
-
+.screenshotThumb {
+  margin: auto;
+  width: 50%;
+}
+.series, .prep {
+  margin: auto;
+width: 71%;
+}
 
 
 

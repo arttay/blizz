@@ -92,8 +92,7 @@ app.controller("resume", function($scope, $http){
 
 	$http({
 		method: "GET", url: 'js/controllers/data/resume.data.js'
-	}).
-	success(function(data){
+	}).success(function(data){
 		$scope.compInfo = data;
 	});
 })//end controller
@@ -115,7 +114,7 @@ app.controller("qualif", function($scope, $http) {
 	});
 })//end controller
 
-app.controller("screenShots", function($scope) {
+app.controller("screenShots", function($scope, $http) {
 
 
 	var screenShots = $scope.screenShots = [
@@ -125,6 +124,8 @@ app.controller("screenShots", function($scope) {
 		{image: 'http://lorempixel.com/100/100/', large: 'http://lorempixel.com/300/300/', thumb: 'http://lorempixel.com/100/100/', text: 'img' }
 	];
 	$scope.src = lightBoxImg[0].image;
+	$scope.len = lightBoxImg.length;
+
 	$scope.lightbox = function() {
 		var light = $scope.lightBoxImg[0];
 		$scope.src = light.large;

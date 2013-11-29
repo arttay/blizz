@@ -11,7 +11,6 @@
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.1.4/angular.min.js"></script>
   <script src="js/controllers/main.controler.js"></script> 
 
-  <script src="js/directives/lightbox.directive.js"></script> 
   <script src="js/vendor/angular-ui.js"></script> 
   <script src="http://code.angularjs.org/1.1.2/angular-sanitize.js"></script>
   <script src="js/vendor/ui-bootstrap-custom-tpls-0.6.0.js"></script> 
@@ -26,15 +25,15 @@
 
 ...rotten kids....
 -->
-  <div ng-controller="MyController" ng-init="imageToShow = 1">
+  <div ng-controller="MyController">
 
 
 
 
   <div id="slideshow">
 
-      <div class = "pages">
-          <div ng-view id="slides" ng-switch="imageToShow" ng-animate="'slide'">
+      <div class = "pages" >
+          <div ng-view id="slides" ng-animate="'slide'">
                     <!--inside main view-->
           </div><!--end main view-->
       </div><!--end pages-->
@@ -64,9 +63,11 @@
     </div><!--end series-->
       <div class = "screenshots">
           <div ng-controller = "screenShots">
-            <div class = "screenshotThumb" >
-              <img ng-src = "{{src}}" alt = "{{screenShots.text}}" ng-click = "lightbox(); tog=1" ng-class = "{'light-box': tog==1}" />
-            </div><!--end thumb-->
+
+              <div class = "screenshotThumb" >
+                <div class = "screenTitle">screentitle({{len}})</div>
+                <img ng-src = "{{src}}" alt = "{{screenShots.text}}" />
+              </div><!--end thumb-->
             <div class = "ligthbox">
 
               <!--<div ng-include ="'js/templates/lightbox.html'"></div>--><!--end lightbox temp-->
