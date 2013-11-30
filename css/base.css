@@ -55,7 +55,7 @@ a {
 }
 
 .slide-animate.ng-enter {
-  right:100%;
+  left:100%;
 }
 .slide-animate.ng-enter.ng-enter-active {
   left:0;
@@ -178,7 +178,7 @@ padding-left: 5%;
 }
 .introFooter {
   text-align: center;
-  background-color: #ccc;
+  font-size: 150%;
   height: 100px;
 }
 .factionSide {
@@ -238,11 +238,19 @@ padding-left: 5%;
 
 .rotate {
 
--webkit-transform: rotate(-32deg);
--moz-transform: rotate(-32deg);
--ms-transform: rotate(-32deg);
--o-transform: rotate(-32deg);
+-webkit-transform: rotate(-28deg);
+-moz-transform: rotate(-28deg);
+-ms-transform: rotate(-28deg);
+-o-transform: rotate(-28deg);
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+padding-top: 34%;
+padding-right: 5%;
+font-size: 280%;
+line-height: .9;
+width: 75%;
+
+
 
 }
 
@@ -291,7 +299,15 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   color: #85d5f1;
   height: 700px;
 }
+.qualBG {
+    background-image: url(../images/bg/Warcraft-3-HD-Wallpaper-Picture.jpg);
+background-position: 467%;
+  background-color: #000;
+  background-repeat: no-repeat;
+  color: #85d5f1;
+  height: 700px;
 
+}
 .titleH2 {
   font-size: 31.5px;/*h2*/
   padding: 17px;
@@ -334,7 +350,7 @@ margin-left: 3%;
 }
 
 .have {
-  width: 30%;
+  width: 34%;
 
 }
 .ask {
@@ -377,7 +393,9 @@ text-decoration: underline;
 .have p {
   padding-left: 10px;
   line-height: 16px;
+  width: 75%;
 }
+
 
 
 .random {
