@@ -39,20 +39,16 @@ app.controller("MyController", function($scope, $http, $location) {
 
 })//end controller mycontroller
 app.controller("imgSlide", function($scope, $http){
-  $scope.myInterval = 5000;
+  $scope.myInterval = 50000;
   var slides = $scope.slides = [
-	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' },
-	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' },
-	{image: 'http://lorempixel.com/550/450/', thumb: 'http://lorempixel.com/550/450/', text: 'img' }
 
-  /*
 	{image: 'images/slide1.jpg', thumb: 'images/slide1.jpg', text: 'img' },
 	{image: 'images/slide2.jpg', thumb: 'images/slide2.jpg', text: 'img' },
 	{image: 'images/slide3.jpg', thumb: 'images/slide3.jpg', text: 'img' },
 	{image: 'images/slide4.jpg', thumb: 'images/slide4.jpg', text: 'img' }
 	//{image: 'images/slide5.jpg', thumb: 'images/slide5.jpg', text: 'img' }
 	//{image: 'images/slide6.jpg', thumb: 'images/slide6.jpg', text: 'img' }
-*/
+
   ];
 
 })
