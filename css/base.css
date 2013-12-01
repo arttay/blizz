@@ -56,12 +56,16 @@ a {
 
 .slide-animate.ng-enter {
   left:100%;
+  /*this works for now*/
+    position: absolute;
+  bottom: 700px;
 }
 .slide-animate.ng-enter.ng-enter-active {
   left:0;
+
 }
 .slide-animate.ng-leave.ng-leave-active {
-  right:-100%;
+  left:-100%;
 }
 
 
@@ -324,7 +328,8 @@ margin-left: 3%;
 }
 .resumeHeader {
   width: 100%;
-  height: 50px;
+  height: 33px;
+  background-color: #ccc;
 }
 
 .resOdd {
@@ -422,6 +427,77 @@ ol.questList {
 .screenTitle {
   padding-bottom: 7%;
 }
+.posHeaderInfo, .posAccomInfo, .posResponsInfo {
+  float: left;
+  text-align: center;
+  font-size: 150%;
+font-weight: bold;
+}
+
+.posAccomInfo, .posResponsInfo {
+  width: 40%;
+}
+.posHeaderInfo {
+  width: 13%;
+}
+
+
+.contactInnerWrapper img {
+  display: block;
+  margin: auto;
+  padding-top: 5%;
+}
+
+.contactInnerWrapper p {
+  text-align: center;
+  font-size: 150%;
+}
+p.ready {
+  padding-top: 15px;
+}
+.contact .phone, .contact .email {
+  text-align: center;
+  font-size: 150%;
+}
+
+.contact .email{
+  padding-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
