@@ -31,6 +31,7 @@ if (!Array.prototype.indexOf) {
 jQuery.noConflict();
 jQuery(document).ready(function(){
 	var link = document.location.href.split('/');
+	
 		if(link[5].length != 0) {
 			console.log(link[5]);
 			jQuery("." + link[5] + "").addClass("currentLink");

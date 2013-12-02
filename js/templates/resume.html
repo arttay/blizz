@@ -10,17 +10,17 @@
 		<div ng-repeat="info in compInfo">
 			<div class = "{{info.posComp}}" ng-class-odd = "'resOdd'" ng-class-even = "'resEven'">
 				<div class = "posInfo">
-					<div class ="posTitle"><h2>{{info.posTitle}}</h2></div><!--end title-->
+					<div class ="posTitle">{{info.posTitle}}</div><!--end title-->
 					<div class = "posCompany">
-						<a href = "{{info.link}}"><h3>{{info.posComp}}</h3></a>
+						<a href = "{{info.link}}">{{info.posComp}}</a>
 					</div><!--end company-->
 					<div class = "posDates">{{info.posDates}}</div><!--end dates-->
 				</div><!--end pos info-->
-				<div class = "respons">
-					{{info.respons}}
-				</div><!--end responsibilities-->
 				<div class = "accomp">
-					{{info.accomp}}
+					{{info.accomp}} 
+				</div><!--end responsibilities-->
+				<div class = "respons">
+					 {{info.respons}}
 				</div><!--end Accomplishments-->
 				<div class = "clear"></div><!--clearfix-->
 			</div><!--end info.posComp-->

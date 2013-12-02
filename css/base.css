@@ -24,9 +24,11 @@ a {
   background-image: -webkit-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
   background-image: -ms-linear-gradient(bottom, #15F3FF 0%, #017CB9 100%);
   background-image: linear-gradient(to bottom, #15F3FF 0%, #017CB9 100%);
+  background-color: #21b0f1;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+
   display: block;
   width: 234px;
   margin: 10px auto;
@@ -253,6 +255,7 @@ padding-right: 5%;
 font-size: 280%;
 line-height: .9;
 width: 75%;
+color: #01b2f1;
 
 
 
@@ -323,7 +326,7 @@ margin-left: 3%;
 }
 .resOdd, .resEven{
   width: 100%;
-  height: 130px;
+  height: 150px;
   overflow: hidden;
 }
 .resumeHeader {
@@ -424,7 +427,7 @@ ol.questList {
   margin: auto;
   padding-top: 10%;
 }
-.screenTitle {
+.screen5 {
   padding-bottom: 7%;
 }
 .posHeaderInfo, .posAccomInfo, .posResponsInfo {
@@ -465,7 +468,13 @@ p.ready {
 }
 
 
-
+.posTitle, .posCompany {
+ font-size: 150%; 
+ padding-top: 1%;
+}
+.posDates {
+  padding-top: 1%;
+}
 
 
 
