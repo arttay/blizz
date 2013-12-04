@@ -1,6 +1,7 @@
 <div class = "tempWrapper">
   <div ng-controller = "qualif" class = "qualBG">
     <div class = "ask">
+      <div class = "askTitle">The droids your looking for</div>
       <div ng-repeat = "q in wAsk" class = "qCell">
       	<div ng-class-even = "'qEven'" ng-class-odd="'qOdd'">
       		<p >{{q.what}}</p>
@@ -8,6 +9,7 @@
       </div><!--end ng repeat-->
     </div><!--end ask-->
         <div class = "have">
+          <div class = "haveTitle">What I provide</div>
       <div ng-repeat = "q in wHave">
         <div ng-class-even = "'qEven'" ng-class-odd="'qOdd'">
           <p ng-bind-html="q.what"><!-- q.what is inserted here(hur)<_< --></p><!--ng-bind-html allows for html in the controller-->

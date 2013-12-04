@@ -1,4 +1,5 @@
 [
+		
 		{
 			"what": "Expert knowledge of CSS, JavaScript, and DOM"
 		},
@@ -25,8 +26,5 @@
 		},
 		{
 			"what": "Strong knowledge of object-oriented programming in languages like Java, C++, Objective-C, or equivalent"
-		},
-		{
-			"what": "A passion for web development and gaming"
 		}
 ]
